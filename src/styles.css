@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  --primary: #32cd32;
+  --accent: #28a745;
+}
+
+*{
+  font-family: "Lato", sans-serif;
+}
+
+.bidnow{
+  color: black;
+}
+
+.bidnow:hover{
+  color: black;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+input {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 16px;
+  border: none;
+  background-color: rgba(222, 222, 222, 0.401);
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+button {
+  background-color: var(--primary);
+  transition: background-color 0.1s ease;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: color 0.1s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.error{
+  color: rgb(198, 0, 0);
+}

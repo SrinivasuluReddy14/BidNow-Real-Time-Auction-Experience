@@ -1,0 +1,23 @@
+<div class="container">
+  <h1><a class="bidnow" href="/">BidNow</a></h1>
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label>Email</label>
+    <input type="email" formControlName="email" placeholder="Email" />
+    <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="error">
+      <small *ngIf="loginForm.get('email')?.errors?.['required']">*Email is required</small>
+      <small *ngIf="loginForm.get('email')?.errors?.['email']">*Invalid email format</small>
+    </div>
+
+    <label><div class="links">Password<a href="/password-recovery">Forgot Password?</a></div></label>
+    <input type="password" formControlName="password" placeholder="Password" />
+    <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="error">
+      <small *ngIf="loginForm.get('password')?.errors?.['required']">*Password is required</small>
+      <small *ngIf="loginForm.get('password')?.errors?.['minlength']">*Password must be at least 6 characters</small>
+    </div>
+    
+    <button [disabled]="loginForm.invalid" (click)="navigateToHome()">Login</button>
+
+  </form>
+  <p>Don't have an account? <a href="/register">Sign up here</a></p>
+</div>
